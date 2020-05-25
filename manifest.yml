@@ -1,0 +1,11 @@
+applications:
+- name: puppeteer-proto
+  routes:
+    - route: puppeteer-proto.cfapps.io
+  stack: cflinuxfs3
+  buildpack: https://github.com/cloudfoundry-attic/multi-buildpack
+  command: node index.js
+  disk_quota: 1024MB
+  memory: 128MB
+  instances: 1
+  health-check-type: process
